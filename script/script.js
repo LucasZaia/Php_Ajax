@@ -12,5 +12,9 @@ function send() {
         data: JSON.stringify(obj),
         dataType: 'json',
 
-    });
+    }).done(() => {
+        const text = document.querySelectorAll("#TextArea");
+        text.style.border = "1px solid green";
+
+    })
 }

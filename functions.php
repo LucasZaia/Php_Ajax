@@ -12,7 +12,9 @@
 
     $tex->setNome($obj->name);
 
-    $tex->TextCad();
+    if($tex->TextCad()){
+        
+    }
         
    
 
