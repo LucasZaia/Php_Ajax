@@ -12,8 +12,15 @@
 
     $tex->setNome($obj->name);
 
-    if($tex->TextCad()){
-        
+    if($tex->TextCads()){
+        header('Content-Type: application/json; charset=utf-8');
+        header('Access-Control-Allow-Origin: *');
+        echo json_encode(array('msg' => "Sucesso ao Inserir"));
+    }
+    else{
+        header('Access-Control-Allow-Origin: *');
+        header('Content-Type: text/html; charset=utf-8',true,600);
+        die("Falha ao Inserir");
     }
         
    

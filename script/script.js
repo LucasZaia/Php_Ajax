@@ -12,9 +12,21 @@ function send() {
         data: JSON.stringify(obj),
         dataType: 'json',
 
-    }).done(() => {
-        const text = document.querySelectorAll("#TextArea");
-        text.style.border = "1px solid green";
+    }).done((response) => {
+        const li = document.getElementById('textArea');
 
-    })
+
+        li.style.border = '2px solid green';
+
+    }).fail((jqXHR, textStatus) => {
+        const span = document.getElementById('textArea');
+
+
+        span.style.border = '2px solid red';
+
+        return false;
+    }).always(() => {});
+
+    return false;
+
 }
