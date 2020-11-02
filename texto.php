@@ -20,6 +20,11 @@
           $cx = "INSERT INTO nomes (nome) values ('$this->nome');";
           return $con->inserir($cx);
        }
+       public function ConsultTex(){
+           $con = new Conection();
+           $cx = "SELECT * FROM nomes;";
+           return $con->consultar($cx);
+       }
     }
 
 ?>

@@ -6,13 +6,14 @@
     require 'texto.php';
 
     $tex = new Texto();
+    
 
     $obj = file_get_contents("php://input");
     $obj = json_decode($obj);
 
     $tex->setNome($obj->name);
 
-    if($tex->TextCads()){
+    if($tex->TextCad()){
         header('Content-Type: application/json; charset=utf-8');
         header('Access-Control-Allow-Origin: *');
         echo json_encode(array('msg' => "Sucesso ao Inserir"));
@@ -22,7 +23,10 @@
         header('Content-Type: text/html; charset=utf-8',true,600);
         die("Falha ao Inserir");
     }
+
+   
         
+   
    
 
     

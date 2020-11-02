@@ -19,13 +19,9 @@
         </div>
     <form>
         <button type="button" onclick="send()">Enviar</button>
-        <ul class="list-group">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+        <ul class="list-group" id="list">
         </ul>
+        <button type="button" class="btn btn-outline-info" id="busca" onclick="buscar()">Buscar</button>
     </div>
 </body>
 </html>

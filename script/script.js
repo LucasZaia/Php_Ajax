@@ -30,3 +30,20 @@ function send() {
     return false;
 
 }
+
+function buscar() {
+
+    $.ajax({
+        url: "http://localhost/php_Ajax/load.php",
+        type: "GET",
+        dataType: 'json'
+    }).done(function(result) {
+        const list = document.getElementById("list");
+        console.log(result.resultado);
+
+        $('#list').prepend('<li class="list-group-item">' + result.resultado + '</li>');
+
+
+
+    })
+}
